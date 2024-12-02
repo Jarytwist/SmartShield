@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// Importación de bibliotecas necesarias y componentes de React Native y Expo
+// Aquí se configura la navegación entre pantallas y se define el stack principal de la ap
+import 'react-native-gesture-handler';
+import MyDrawer from './navigation/drawer';
+import MyStack from './navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  return(
+    <NavigationContainer>
+        <MyStack />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
